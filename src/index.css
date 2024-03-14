@@ -1,0 +1,246 @@
+/* body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+} */
+
+*{
+ box-sizing: border-box;
+ padding: 0;
+ margin: 0;
+} 
+ul {
+  list-style: none;
+}
+
+body {
+  font-family: 'Lato', sans-serif;
+}
+/* ======= login  */
+
+.login-form .left-login {
+  background-color:#FFFCF5;
+  min-height: 100vh;
+}
+.login-form .heading h1{
+  font-size: 50px;
+    letter-spacing: 4px;
+   font-family: 'Lato', sans-serif;
+
+}
+.login-form .password-input:hover{
+  background: transparent !important;
+}
+.login-form .password-input{
+  background: transparent !important;
+}
+ /*  ============ Sumbit button  */
+.sumbit-btn {
+  background-color: #C79832 !important;
+  color:white !important;
+  padding: 10px 35px 10px 35px !important; 
+  border-radius: 10px !important;
+}
+
+/* ===============  header ================  */
+.header{
+  background-color: #FFF3DA;
+}
+/* ==================== Dashbord ===============  */
+
+.dashbord-menu {
+  overflow-y: scroll;
+}
+.dashbord-menu .dashbord-icon{
+  color:#9AA0A9 !important;
+}
+
+.dashbord-menu .dashbord-title  {
+  color:#9AA0A9 !important;
+  text-decoration: none;  
+}
+.dashbord-menu .dashbord-title:hover {
+  color:#272B70 !important;
+}
+
+.dashbord-menu ul li{
+font-family: 'Lato', sans-serif;
+font-size:16.2px;
+
+}
+.dashbord-menu .dashbord-title a {
+  color:#9AA0A9 !important;
+  text-decoration: none; 
+  
+}
+.dashbord-menu .dashbord-title a:hover {
+color:#272B70 !important;
+
+}
+
+.menu-item {
+  cursor: pointer;
+  margin-bottom: 10px;
+  transition:  0.3s ease;
+}
+
+
+.menu-item-content {
+  display: flex;
+  align-items: center;
+}
+
+
+.dashbord-title {
+  flex-grow: 1;
+}
+
+.submenu {
+  display: none;
+  list-style: none;
+  margin-left: 10px;
+  padding-left: 0;
+}
+
+.submenu li {
+  margin-bottom: 5px;
+}
+
+.submenu a {
+  text-decoration: none;
+  color: #333 ;
+}
+
+.submenu a:hover {
+  color: #5c0808 !important;
+}
+
+.arrow {
+  margin-left: auto;
+}
+
+
+/* ================ Invoice Sale =============== */
+.invoice-head{
+  color: #9AA0A9 !important;
+  font-weight: 500 !important;
+  background-color: white !important
+}
+
+/* ==================================  Max-width:576px =========================== */
+@media (max-width: 576px) {
+ 
+  body{
+    font-size: 14px !important;
+  }
+  body h3{
+    font-size: 18px !important;
+  }
+  .dashbord-menu{
+   display: none;
+  }
+ 
+  .dashbord-menu {
+    top: 0;
+    width: 35%;
+   overflow-y: auto;
+   border: 1px solid rgb(194, 191, 191);
+   border-radius: 10px 10px 20px 30px;
+
+  }
+
+  .dashbord-icon{
+    margin-left: 8px !important;
+  }
+  .dashbord-menu .dashbord-icon img:hover{
+    background-color: #9394ad2f;
+     color:white !important;
+    border-radius: 10px !important;
+  }
+
+  .dashbord-menu ul li {
+    font-family: 'Lato', sans-serif;
+    font-size:14px;
+    }
+   
+
+    .dashbord-menu .dashbord-title {
+      padding: 5px;
+    }
+    .dashbord-menu .dashbord-title a {
+    color: #9AA0A9;
+      
+    }
+    .dashbord-menu .dashbord-title a:hover {
+    color:#272B70 !important;
+    
+    }
+    .dashbord-menu  .close-btn{
+      display: block;
+    }
+  }
+
+     /* body{
+    font-size: 13px !important;
+  }
+  body h3{
+    font-size: 18px !important;
+  }
+  body .next-btn{
+    padding: 5px !important;
+    font-size: 12px !important;
+    border-radius: 10px;
+  }
+  
+  /* .dashbord-menu{
+    width: 7% !important;
+    border-radius: 20px;
+    text-align: center!important;
+    margin-left: -12px!important;
+    background-color: #f0f0f74f !important
+  } */
+
+
+   /* ==================================  Min-width:576px ===========================  */
+
+
+  @media (min-width: 576px) and (max-width: 768px) {
+    
+    body{
+      font-size: 16px !important;
+    }
+    body h3{
+      font-size: 20px !important;
+    }
+    .dashbord-menu{
+      display: none ;
+     }
+     .dashbord-menu {
+      background-color: white !important;
+     transition: 0.5s ease all !important;
+     min-width:30% ;
+     overflow-y: auto;
+      border: 1px solid rgb(194, 191, 191);
+   border-radius: 10px 10px 20px 30px;
+   
+    }
+ 
+  }
+
+/* ======================== 768px ================================= */
+
+/* @media (min-width:768px) {
+.dashbord-menu{
+    width:20% !important;
+    border-radius: 23px;
+    text-align: center!important;
+    /* margin-left: -12px!important; */
+
