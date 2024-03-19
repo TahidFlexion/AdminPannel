@@ -17,7 +17,7 @@ function topmenu(){
                 <MenuIcon className="fs-2"/>
               </div>
               <input
-                className="form-control border-0 p-3 " 
+                className="form-control border border-0 p-3 rounded  rounded-1 "  style={{maxWidth:"500px"}}
                 type="search"
                 placeholder="Search here"
                 aria-label="Search "
@@ -32,7 +32,7 @@ function topmenu(){
           <div className="user float-end">
             <div className="user-details ">
               <div className="row ">
-                <div className="col-3">
+                <div className="col-3" >
                   <div className="dropdown">
                     <button
                       className="btn btn-white dropdown-toggle"

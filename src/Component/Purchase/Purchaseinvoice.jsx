@@ -25,7 +25,7 @@ function Purchaseinvoice() {
           </NavLink>
         </div>
         <div className="col-lg-12 col-md-12 col-md-12 col-12  my-lg-5 my-md-4 my-sm-2 my-3 ">
-          <div className="shadow p-lg-4 p-md-4 p-sm-4 p-2 rounded-3" style={{ backgroundColor: "white" ,color:"#9AA0A9"}}>
+          <div className="shadow p-lg-5 p-md-4 p-sm-4 p-2 rounded-3" style={{ backgroundColor: "white" ,color:"#9AA0A9"}}>
             <div className="row justify-content-around text-center">
               <div className="col">Bill No <ArrowDropDownIcon /></div>
               <div className="col">Party Name <ArrowDropDownIcon /></div>
@@ -35,7 +35,7 @@ function Purchaseinvoice() {
             </div>
           </div>
 
-          <div className="shadow p-lg-4 p-md-4 p-sm-4 p-2 rounded-3 my-3" style={{ backgroundColor: "white" }}>
+          <div className="shadow p-lg-5 p-md-4 p-sm-4 p-2 rounded-3 my-3" style={{ backgroundColor: "white" }}>
             <div className="row justify-content-around text-center">
               <div className="col">1</div>
               <div className="col">Anne Jacob</div>
@@ -46,7 +46,7 @@ function Purchaseinvoice() {
           </div>
 
           <div className="shadow  p-lg-4 p-md-4 p-sm-4 p-2 rounded-3 my-3" style={{ backgroundColor: "white" }}>
-            <div className="row justify-content-around text-center">
+            <div className="row p-lg-4 p-md-4 p-sm-4 p-1 justify-content-around text-center">
               <div className="col">2</div>
               <div className="col">Bethany Jackson</div>
               <div className="col">24ASEDSA5588</div>
@@ -55,7 +55,7 @@ function Purchaseinvoice() {
             </div>
           </div>
 
-          <div className="shadow  p-4 rounded-3 my-3" style={{ backgroundColor: "white" }}>
+          <div className="shadow  p-lg-5 p-md-4 p-sm-4 p-1 rounded-3 my-3" style={{ backgroundColor: "white" }}>
             <div className="row justify-content-around text-center">
               <div className="col">3</div>
               <div className="col">James Mullican</div>

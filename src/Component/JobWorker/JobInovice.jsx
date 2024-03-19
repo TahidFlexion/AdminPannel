@@ -15,8 +15,8 @@ function JobInovice() {
             placeholder="20/03/2024"
           />
         </div>
-        <div className="col-lg-12 col-md-12 col-md-12 col-12">
-          <div className="shadow p-4 rounded-3 my-5" style={{ backgroundColor: "white",color:"#9AA0A9" }}>
+        <div className="col-lg-12 col-md-12 col-md-12 col-12 ">
+          <div className="shadow p-lg-5 p-md-4 p-sm-4 p-1 rounded-3 my-5" style={{ backgroundColor: "white",color:"#9AA0A9" }}>
             <div className="row justify-content-around text-center">
               <div className="col">Bill No <ArrowDropDownIcon /></div>
               <div className="col">Party Name <ArrowDropDownIcon /></div>
@@ -26,7 +26,7 @@ function JobInovice() {
             </div>
           </div>
 
-          <div className="shadow  p-4  rounded-3 my-3" style={{ backgroundColor: "white" }}>
+          <div className="shadow  p-lg-5 p-md-4 p-sm-4 p-1 rounded-3 my-3" style={{ backgroundColor: "white" }}>
             <div className="row justify-content-around text-center">
               <div className="col">1</div>
               <div className="col">Anne Jacob</div>
@@ -36,7 +36,7 @@ function JobInovice() {
             </div>
           </div>
 
-          <div className="shadow  p-4 rounded-3 my-3" style={{ backgroundColor: "white" }}>
+          <div className="shadow  p-lg-5 p-md-4 p-sm-4 p-1 rounded-3 my-3" style={{ backgroundColor: "white" }}>
             <div className="row justify-content-around text-center">
               <div className="col">2</div>
               <div className="col">Bethany Jackson</div>
@@ -46,7 +46,7 @@ function JobInovice() {
             </div>
           </div>
 
-          <div className="shadow  p-4 rounded-3 my-3" style={{ backgroundColor: "white" }}>
+          <div className="shadow  p-lg-5 p-md-4 p-sm-4 p-1 rounded-3 my-3" style={{ backgroundColor: "white" }}>
             <div className="row justify-content-around text-center">
               <div className="col">3</div>
               <div className="col">James Mullican</div>

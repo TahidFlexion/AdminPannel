@@ -1,4 +1,4 @@
-import React from "react";
+import React, { createContext, useState } from "react";
 import { FormGroup, Form } from "reactstrap";
 import TextField from "@mui/material/TextField";
 import VisibilityOff from "@mui/icons-material/VisibilityOff";
@@ -11,16 +11,20 @@ import {
   InputLabel,
 } from "@mui/material";
 
-function Login({onLogin}) {
+function Login({hanldeSubmit}) {
   const [showPassword, setShowPassword] = React.useState(false);
-
   const handleClickShowPassword = () => setShowPassword((show) => !show);
+
+ const loginData= createContext()
+ const [email,SetEmail] =useState()
+ const [password,setPassword] =useState()
+
 
   return (
     <div className="login-form d-flex justify-content-center align-items-center">
-      <div className="container-fluid ">
+      <div className="container-fluid">
         <div className="row" style={{ backgroundColor: "white" }}>
-          <div className="col-lg-6 col-md-6 col-sm-12 d-none d-sm-flex justify-content-center align-items-center left-login">
+          <div className="col-lg-6 col-md-6 col-sm-12 col-12 left-login  d-none d-md-flex justify-content-center align-items-center ">
             <div>
               <img
                 src="/images/Group 170.png"
@@ -31,29 +35,28 @@ function Login({onLogin}) {
             </div>
           </div>
 
-          <div className="col-lg-6 col-md-6 col-sm-12 py-5" style={{ marginTop: "150px" }}>
-            <div className="heading text-center mb-4">
-              <h1>Welcome</h1>
-            </div>
-            <Form className="px-md-4">
-              <FormGroup >
+          <div className="col-lg-6 col-md-6 col-sm-12 col-12 p-4 d-flex justify-content-center align-items-center py-5">
+            <Form className="px-md-4 w-100">
+              <h1 className="heading text-center mb-4" style={{letterSpacing:"2px"}}>Welcome</h1>
+
+              <FormGroup>
                 <TextField
                   label="Email Id"
                   variant="standard"
-                  color="warning" className="w-100"
+                  color="warning"
+                  className="w-100" value={email} onChange={((e)=>SetEmail(e.target.value))}
                 />
               </FormGroup>
-              <FormGroup > 
+              <FormGroup>
                 <FormControl sx={{ width: "100%" }} color="warning" variant="filled">
                   <InputLabel
                     htmlFor="filled-adornment-password"
                     style={{ marginLeft: "-10px" }}
-                    className="form-input"
+                    className="form-input" value={password} onChange={((e)=>setPassword(e.target.value))}
                   >
                     Password
                   </InputLabel>
                   <FilledInput
-                     
                     id="filled-adornment-password"
                     type={showPassword ? "text" : "password"}
                     endAdornment={
@@ -66,7 +69,8 @@ function Login({onLogin}) {
                           {showPassword ? <VisibilityOff /> : <Visibility />}
                         </IconButton>
                       </InputAdornment>
-                    }className="password-input"
+                    }
+                    className="password-input"
                   />
                 </FormControl>
               </FormGroup>
@@ -82,7 +86,8 @@ function Login({onLogin}) {
                     backgroundColor: "#C79832",
                     boxShadow: "0px 2px 4px 1px gray",
                     width: "21rem",
-                  }} onClick={onLogin}
+                  }}
+                  onClick={hanldeSubmit}
                 >
                   Sign In
                 </button>

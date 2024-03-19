@@ -4,7 +4,7 @@ function SearchParty() {
   return (
     <div className="container mt-lg-5  mt-md-5  mt-sm-5 mt-0 py-lg-3 py-md-3 py-sm-2 py-0    " >
       <div className="row justify-content-center ">
-        <div className="col-lg-6 col-md-6 col-sm-12 p-lg-5 p-md-5 p-sm-5 p-5 shadow" style={{ color: "#272B70" }}>
+        <div className=" col-lg-6 col-md-6 col-sm-12 p-lg-5 p-md-5 p-sm-5 p-5 shadow" style={{ color: "#272B70" }}>
           <h3 className='text-left pb-5'>Search Party</h3>
           <div className="">
             <div className="mb-3">

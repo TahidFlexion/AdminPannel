@@ -1,4 +1,4 @@
-import { Route, Routes } from 'react-router-dom';
+import { Route, Routes, useNavigate } from 'react-router-dom';
 import './App.css';
 import Dashbord from './Component/Dashbord';
 import SaleInvoice2 from './Component/Sales/SaleInvoice2';
@@ -25,66 +25,70 @@ import WorkerReport from './Component/Worker/WorkerReport';
 import AddWorker from './Component/Worker/AddWorker';
 import Purchaseinvoice2 from './Component/Purchase/Purchaseinvoice2';
 import { useEffect, useState } from 'react';
+import Example from './Example';
+
 function App() {
-  const [menushow,setMenushow]=useState(false)
-  const [loggedIn,setLoggedIn]=useState(false)
+  const [menushow, setMenushow] = useState(false);
+  const [isLogin, setIsLogin] = useState(false);
+  const navigate = useNavigate();
 
   useEffect(() => {
-    const isUserLoggedIn = localStorage.getItem('loggedIn');
-    if (isUserLoggedIn === 'true') {
-      setLoggedIn(true);
+    // Check if the user is already logged in by checking local storage
+    const loggedIn = localStorage.getItem('isLoggedIn');
+    if (loggedIn === 'true') {
+      setIsLogin(true);
     }
   }, []);
 
-  const handleLogin = () => {
-    setLoggedIn(true);
-    localStorage.setItem('loggedIn', 'true');
-  };
-
-  if (!loggedIn) {
-    return <Login onLogin={handleLogin} />;
+  function handleLogin() {
+    setIsLogin(true); 
+    // Store login state in local storage
+    localStorage.setItem('isLoggedIn', true);
+    navigate("/");
   }
 
-
-  
   return (
-    < >
-    <Header  menushow={menushow} setMenushow={setMenushow}/>  
-     <div className='container-fluid bg-light ' style={{backgroundColor:""}}>
-    <div className='row' >
-    <div className='col-lg-2 col-md-2 col-sm-0 col-0 my-lg-5' style={{backgroundColor:""}}>
-    <Dashbord  menushow={menushow} setMenushow={setMenushow}/>
-    </div>
-    <div className='col-lg-10 col-md-10 col-sm-12 col-12  my-lg-5 my-md-5 my-sm-5 my-5 pt-5 ' >
-<Routes>
-<Route path='/' element={ <DashbordHome/>}/>
-  <Route path='/SalesInvoice' element={<SalesInvoice/>}/>
-  <Route path='/SalesInvoice2' element={<SaleInvoice2/>}/>
-  <Route path='/SalesOutstanding' element={ <SalesOutstanding/>}/>
-  <Route path='/SearchParty' element={ <SearchParty/>}/>
-  <Route path='/Add_Party' element={ <Add_Party/>}/>
-  <Route path='/purchaseinvoice' element={ <Purchaseinvoice/>}/>
-  <Route path='/purchase2' element={ <Purchaseinvoice2/>}/>
-  <Route path='/purchaseoutstanding' element={ <PurchaseOutstanding/>}/>
-  <Route path='/Challans' element={ <Challans/>}/>
-  <Route path='/AddChallans' element={ <AddChallans/>}/>
-  <Route path='/ShowDesign' element={ <ShowDesign/>}/>
-  <Route path='/AddDesign' element={ <AddDesign/>}/>
-  <Route path='/AssignDesign' element={ <AssignDesign/>}/>
-  <Route path='/Addjob' element={ <Addjob/>}/>
-  <Route path='/Jobinvoice' element={ <JobInovice/>}/>
-  <Route path='/jobreport' element={ <JobReport/>}/>
-  <Route path='/jobChallans' element={ <JobChallans/>}/>
-  <Route path='/AddjobChallan' element={ <AddjobChallan/>}/>
-  <Route path='/WorkerReport' element={ <WorkerReport/>}/>
-  <Route path='/AddWorker' element={ <AddWorker/>}/>  
-  <Route path='/Login' element={ <Login/>}/>
-</Routes>
-
-    </div>
-    </div>
-    </div>
-    
+    <>
+      {isLogin ? (
+        <>
+          <Header menushow={menushow} setMenushow={setMenushow} />
+          <div className='container-fluid bg-light ' style={{ backgroundColor: "" }}>
+            <div className='row' >
+              <div className='col-xxl-2 col-xl-2 col-lg-2 col-md-2 col-sm-0 col-0 my-lg-5' style={{ backgroundColor: "" }}>
+                <Dashbord menushow={menushow} setMenushow={setMenushow} />
+              </div>
+              <div className='col-xxl-10 col-xl-10 col-lg-10 col-md-10 col-sm-12 col-12  my-lg-5 my-md-5 my-sm-5 my-5 pt-5 ' >
+                <Routes>
+                  <Route path='/' element={<DashbordHome />} />
+                  <Route path='/SalesInvoice' element={<SalesInvoice />} />
+                  <Route path='/SalesInvoice2' element={<SaleInvoice2 />} />
+                  <Route path='/SalesOutstanding' element={<SalesOutstanding />} />
+                  <Route path='/SearchParty' element={<SearchParty />} />
+                  <Route path='/Add_Party' element={<Add_Party />} />
+                  <Route path='/purchaseinvoice' element={<Purchaseinvoice />} />
+                  <Route path='/purchase2' element={<Purchaseinvoice2 />} />
+                  <Route path='/purchaseoutstanding' element={<PurchaseOutstanding />} />
+                  <Route path='/Challans' element={<Challans />} />
+                  <Route path='/AddChallans' element={<AddChallans />} />
+                  <Route path='/ShowDesign' element={<ShowDesign />} />
+                  <Route path='/AddDesign' element={<AddDesign />} />
+                  <Route path='/AssignDesign' element={<AssignDesign />} />
+                  <Route path='/Addjob' element={<Addjob />} />
+                  <Route path='/Jobinvoice' element={<JobInovice />} />
+                  <Route path='/jobreport' element={<JobReport />} />
+                  <Route path='/jobChallans' element={<JobChallans />} />
+                  <Route path='/AddjobChallan' element={<AddjobChallan />} />
+                  <Route path='/WorkerReport' element={<WorkerReport />} />
+                  <Route path='/AddWorker' element={<AddWorker />} />
+                  <Route path='/new' element={<Example />} />
+                </Routes>
+              </div>
+            </div>
+          </div>
+        </>
+      ) : (
+        <Login hanldeSubmit={handleLogin} />
+             )}
     </>
   );
 }

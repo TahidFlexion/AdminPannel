@@ -55,10 +55,12 @@ body {
   background-color: #FFF3DA;
 }
 /* ==================== Dashbord ===============  */
+/* .dashbord-menu {
+  overflow-y: scroll !important;
+  border: none !important;
 
-.dashbord-menu {
-  overflow-y: scroll;
-}
+} */
+ 
 .dashbord-menu .dashbord-icon{
   color:#9AA0A9 !important;
 }
@@ -76,6 +78,8 @@ font-family: 'Lato', sans-serif;
 font-size:16.2px;
 
 }
+
+
 .dashbord-menu .dashbord-title a {
   color:#9AA0A9 !important;
   text-decoration: none; 
@@ -144,6 +148,11 @@ color:#272B70 !important;
   body h3{
     font-size: 18px !important;
   }
+  
+ .login .sigin-bt{
+    background-color: red !important;
+  }
+
   .dashbord-menu{
    display: none;
   }
@@ -209,8 +218,9 @@ color:#272B70 !important;
   } */
 
 
-   /* ==================================  Min-width:576px ===========================  */
 
+
+   /* ==================================  Min-width:576px ===========================  */
 
   @media (min-width: 576px) and (max-width: 768px) {
     
@@ -228,11 +238,24 @@ color:#272B70 !important;
      transition: 0.5s ease all !important;
      min-width:30% ;
      overflow-y: auto;
-      border: 1px solid rgb(194, 191, 191);
+      border: 1px solid rgba(217, 217, 217, 0.8);
    border-radius: 10px 10px 20px 30px;
    
     }
  
+  }
+
+
+
+  @media (min-width: 992px){
+    .dashbord-menu .dashbord-title{
+    }
+
+  }
+
+  @media (min-width:1400px){
+    
+
   }
 
 /* ======================== 768px ================================= */
@@ -243,4 +266,3 @@ color:#272B70 !important;
     border-radius: 23px;
     text-align: center!important;
     /* margin-left: -12px!important; */
-

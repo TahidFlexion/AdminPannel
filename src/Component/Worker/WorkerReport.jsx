@@ -20,7 +20,7 @@ function WorkerReport() {
         </div>
       </div>
 
-      <div className="col-lg-12 col-md-12 col-md-12 ">
+      <div className="col-xxl-12 col-xl-12 col-lg-12 col-md-12 col-md-12 ">
         <div className="shadow p-lg-5 p-md-4 p-sm-4 p-1 rounded-3 my-lg-5 my-md-3 my-sm-3 my-3" style={{color:"#9AA0A9", backgroundColor: "white" }}>
           <div className="row justify-content-around text-center">
             <div className="col">Bill No <ArrowDropDownIcon /></div>
