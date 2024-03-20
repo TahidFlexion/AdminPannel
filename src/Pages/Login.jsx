@@ -35,8 +35,8 @@ function Login({hanldeSubmit}) {
             </div>
           </div>
 
-          <div className="col-lg-6 col-md-6 col-sm-12 col-12 p-4 d-flex justify-content-center align-items-center py-5">
-            <Form className="px-md-4 w-100">
+          <div className="col-lg-6 col-md-6 col-sm-12 col-12 p-4  d-flex justify-content-center align-items-center py-5 formValue">
+            <Form className="px-md-4 w-100 ">
               <h1 className="heading text-center mb-4" style={{letterSpacing:"2px"}}>Welcome</h1>
 
               <FormGroup>
@@ -85,7 +85,8 @@ function Login({hanldeSubmit}) {
                   style={{
                     backgroundColor: "#C79832",
                     boxShadow: "0px 2px 4px 1px gray",
-                    width: "21rem",
+                    maxWidth: "21rem",
+                    width: "100%"
                   }}
                   onClick={hanldeSubmit}
                 >

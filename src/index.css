@@ -127,9 +127,22 @@ color:#272B70 !important;
   color: #5c0808 !important;
 }
 
-.arrow {
-  margin-left: auto;
+.dashbord-menu .menu-item{
+  position: relative;
 }
+.arrow {
+position: absolute;
+right: 3px;
+top: 12px;
+}
+
+.dashbord-menu .menu-item:hover .arrow {
+  transform: rotate(45deg);
+  transition:  0.5s ease-in-out !important; 
+
+
+}
+
 
 
 /* ================ Invoice Sale =============== */
@@ -195,6 +208,9 @@ color:#272B70 !important;
     .dashbord-menu  .close-btn{
       display: block;
     }
+    .formValue {
+      margin-top: 150px !important;
+    }
   }
 
      /* body{
@@ -244,18 +260,13 @@ color:#272B70 !important;
     }
  
   }
-
-
-
   @media (min-width: 992px){
-    .dashbord-menu .dashbord-title{
-    }
+   
 
   }
 
   @media (min-width:1400px){
-    
-
+ 
   }
 
 /* ======================== 768px ================================= */

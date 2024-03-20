@@ -33,7 +33,6 @@ function App() {
   const navigate = useNavigate();
 
   useEffect(() => {
-    // Check if the user is already logged in by checking local storage
     const loggedIn = localStorage.getItem('isLoggedIn');
     if (loggedIn === 'true') {
       setIsLogin(true);
@@ -42,7 +41,6 @@ function App() {
 
   function handleLogin() {
     setIsLogin(true); 
-    // Store login state in local storage
     localStorage.setItem('isLoggedIn', true);
     navigate("/");
   }
@@ -57,7 +55,7 @@ function App() {
               <div className='col-xxl-2 col-xl-2 col-lg-2 col-md-2 col-sm-0 col-0 my-lg-5' style={{ backgroundColor: "" }}>
                 <Dashbord menushow={menushow} setMenushow={setMenushow} />
               </div>
-              <div className='col-xxl-10 col-xl-10 col-lg-10 col-md-10 col-sm-12 col-12  my-lg-5 my-md-5 my-sm-5 my-5 pt-5 ' >
+              <div className='col-xxl-10 col-xl-10 col-lg-10 col-md-10 col-sm-12 col-12  my-lg-5 my-md-5 my-sm-5 my-5 pt-5 '>
                 <Routes>
                   <Route path='/' element={<DashbordHome />} />
                   <Route path='/SalesInvoice' element={<SalesInvoice />} />
